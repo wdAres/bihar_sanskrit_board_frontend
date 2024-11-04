@@ -1,0 +1,213 @@
+/* Header Based Css  */
+.header {
+    border-bottom: 1px solid #e1e1e1;
+    position: sticky;
+    left: 0;
+    z-index: 99;
+    top: 0;
+    background-color: white;
+}
+
+.inner_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+
+.header_logo img {
+    width: 210px;
+}
+
+.header_nav {
+    display: flex;
+    gap: 0px;
+}
+
+.header_nav_link {
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #181717;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-inline: 13px;
+    text-transform: uppercase;
+}
+
+.header_nav_link::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+.header_nav_link:hover::after {
+    background: #3558b7;
+}
+.header_nav_link[aria-current="page"]::after {
+    background: #3558b7;
+}
+
+.ham_burger_menu {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* Footer */
+
+.footer_top {
+    background: #222222;
+    padding: 75px 0;
+}
+
+.inner_footer_top {
+    margin-inline: auto;
+    display: flex;
+    gap: 70px;
+}
+
+.ift_box_1,
+.ift_box_2,
+.ift_box_3 {
+    flex: 1;
+}
+
+.ift_box_1_img {
+    width: 100%;
+}
+
+.ift_box_1_p {
+    font-size: 17px;
+    color: #dddddd;
+    line-height: 28px;
+}
+
+.boxed_sub_heading {
+    border: 1px solid #949494;
+    color: #949494;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.ift_box_2_links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.ift_box_2_links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.ift_box_2_link {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s ease-in-out;
+    min-height: 30px;
+}
+
+.ift_box_2_link:hover {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer_bottom {
+    background: #333324;
+    border-top: 1px solid #949485;
+    padding: 25px 0;
+}
+
+.inner_footer_bottom {
+    margin-inline: auto;
+    color: white;
+    font-size: 12px;
+}
+
+
+.ift_box_3_form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.ift_box_3_form input {
+    border: 1px solid #444444;
+    background-color: #333333;
+    color: #919191;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.ift_box_3_form textarea {
+    border: 1px solid #444444;
+    background-color: #333333;
+    color: #919191;
+    font-size: 17px;
+    padding: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+}
+
+.ift_box_3_form button {
+    width: 110px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:1000px) {
+    /* Header */
+
+    .header {
+        padding: 10px 0;
+    }
+
+    .header_nav {
+        display: none;
+    }
+
+    .ham_burger_menu {
+        display: flex;
+    }
+
+    .header_logo img {
+        width: 150px;
+    }
+
+
+    /* Footer */
+
+    .footer_top {
+        padding: 50px 0;
+    }
+    
+    .inner_footer_top {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+}
+
+
+
+@media screen and (max-width:680px) {
+    .footer_top {
+        padding: 30px 0;
+    }
+}
