@@ -8,7 +8,6 @@ const Home = () => {
             <div className={`${classes.box_2}`}>
                 <h1 className={classes.h1}> Check COBSE Membership</h1>
                 <p className={classes.p}>BIHAR SANSKRIT SHIKSHA BOARD has established to promote Secondary & Senior Secondary Education with motto to achieve complete literacy in India. EDUCATION FOR ALL is a basic aims of the BIHAR SANSKRIT SHIKSHA BOARD. BIHAR SANSKRIT SHIKSHA BOARD associates & facilitate to other organizations of similar aims and objects to achieve AIMS of BSEKANT SPN UP. The BIHAR SANSKRIT SHIKSHA BOARD is providing freedom of subject choice to the student.</p>
-                <a className={classes.a} href="#!">Chairman</a>
             </div>
             <div className={`${classes.box_3}`}>
                 <div className={classes.boxed_sub_heading}>Student Corner</div>

@@ -3,7 +3,7 @@ import classes from './layoutBased.module.css'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({openSidebar}) => {
   return (
     <header className={classes.header}>
         <div className={`${classes.inner_header} universal_width`}>
@@ -11,14 +11,14 @@ const Header = () => {
         <nav className={classes.header_nav}>
             <NavLink to={'/'} className={classes.header_nav_link}>Home</NavLink>
             <NavLink to={'/courses'} className={classes.header_nav_link}>Courses</NavLink>
-            <a className={classes.header_nav_link} href="#!">About</a>
-            <a className={classes.header_nav_link} href="#!">Admission</a>
-            <a className={classes.header_nav_link} href="#!">Authorised Centers</a>
+            <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink>
+            <NavLink className={classes.header_nav_link} to="/admissions">Admissons</NavLink>
+            <NavLink className={classes.header_nav_link} to="/authorised_centers">Authorised Centers</NavLink>
             <a className={classes.header_nav_link} href="#!">Results</a>
             <a className={classes.header_nav_link} href="#!">Contact Us</a>
         </nav>
         <button className={classes.ham_burger_menu}>
-            <RxHamburgerMenu size={20} />
+            <RxHamburgerMenu onClick={openSidebar} size={20} />
         </button>
         </div>
     </header>

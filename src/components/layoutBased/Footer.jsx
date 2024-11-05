@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './layoutBased.module.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -16,12 +17,13 @@ const Footer = () => {
             <div className={classes.ift_box_2}>
                 <div className={classes.boxed_sub_heading}>Pages</div> 
                 <div className={classes.ift_box_2_links} >
-                    <a className={classes.ift_box_2_link} href="#!">Home</a>
-                    <a className={classes.ift_box_2_link} href="#!">About</a>
-                    <a className={classes.ift_box_2_link} href="#!">Admissions</a>
-                    <a className={classes.ift_box_2_link} href="#!">Courses</a>
-                    <a className={classes.ift_box_2_link} href="#!">Results</a>
-                    <a className={classes.ift_box_2_link} href="#!">Contact</a>
+                    <Link className={classes.ift_box_2_link} to="/">Home</Link>
+                    <Link className={classes.ift_box_2_link} to="/about">About</Link>
+                    <Link className={classes.ift_box_2_link} to="/admissions">Admissions</Link>
+                    <Link className={classes.ift_box_2_link} to="/authorised_centers">Authorised Centers</Link>
+                    <Link className={classes.ift_box_2_link} to="/courses">Courses</Link>
+                    <Link className={classes.ift_box_2_link} to="/">Results</Link>
+                    <Link className={classes.ift_box_2_link} to="/">Contact</Link>
                 </div>
             </div>
             <div className={classes.ift_box_3}>
