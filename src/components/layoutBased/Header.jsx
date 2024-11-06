@@ -14,8 +14,8 @@ const Header = ({openSidebar}) => {
             <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink>
             <NavLink className={classes.header_nav_link} to="/admissions">Admissons</NavLink>
             <NavLink className={classes.header_nav_link} to="/authorised_centers">Authorised Centers</NavLink>
-            <a className={classes.header_nav_link} href="#!">Results</a>
-            <a className={classes.header_nav_link} href="#!">Contact Us</a>
+            <NavLink className={classes.header_nav_link} to="/results">Results</NavLink>
+            <NavLink className={classes.header_nav_link} to="/contact">Contact Us</NavLink>
         </nav>
         <button className={classes.ham_burger_menu}>
             <RxHamburgerMenu onClick={openSidebar} size={20} />

@@ -23,6 +23,8 @@
 .box_1{
     grid-area: one;
     width: 100%;
+    height: 200px;
+    background: #fee7bd;
 }
 .box_2{
     grid-area: two;
