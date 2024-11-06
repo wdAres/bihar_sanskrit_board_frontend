@@ -19,8 +19,8 @@ const Sidebar = ({closeSidebar,sidebar}) => {
             <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/admissions'}>Admissions</Link>
             <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/authorised_centers'}>Authorised Centers</Link>
             <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/courses'}>Courses</Link>
-            <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/'}>Results</Link>
-            <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/'}>Contact</Link>
+            <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/results'}>Results</Link>
+            <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/contact'}>Contact</Link>
         </nav>
     </div>
     </>

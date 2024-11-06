@@ -22,8 +22,8 @@ const Footer = () => {
                     <Link className={classes.ift_box_2_link} to="/admissions">Admissions</Link>
                     <Link className={classes.ift_box_2_link} to="/authorised_centers">Authorised Centers</Link>
                     <Link className={classes.ift_box_2_link} to="/courses">Courses</Link>
-                    <Link className={classes.ift_box_2_link} to="/">Results</Link>
-                    <Link className={classes.ift_box_2_link} to="/">Contact</Link>
+                    <Link className={classes.ift_box_2_link} to="/results">Results</Link>
+                    <Link className={classes.ift_box_2_link} to="/contact">Contact</Link>
                 </div>
             </div>
             <div className={classes.ift_box_3}>
