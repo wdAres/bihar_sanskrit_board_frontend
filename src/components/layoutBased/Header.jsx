@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './layoutBased.module.css'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { NavLink } from 'react-router-dom'
+import GoogleTranslate from '../GoogleTranslate'
 
 const Header = ({openSidebar}) => {
   return (
@@ -20,6 +21,9 @@ const Header = ({openSidebar}) => {
         <button className={classes.ham_burger_menu}>
             <RxHamburgerMenu onClick={openSidebar} size={20} />
         </button>
+        <div className={classes.pos_ab}>
+        <GoogleTranslate />
+        </div>
         </div>
     </header>
   )

@@ -7,6 +7,14 @@
   font-family: "Lato", sans-serif;
 }
 
+body{
+  position: relative !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+.VIpgJd-ZVi9od-ORHb-OEVmcd{
+  display: none;
+}
 .universal_width {
   max-width: 1230px;
 }

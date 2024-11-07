@@ -12,7 +12,6 @@ const StaticLayout = ({children}) => {
 
   return (
     <>
-     <div id="google_translate_element"> </div>
     <Header openSidebar={openSidebar} />
     <Sidebar sidebar={sidebar} closeSidebar={closeSidebar} />
     {children}

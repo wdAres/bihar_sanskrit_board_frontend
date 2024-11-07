@@ -63,6 +63,13 @@
     background-color: transparent;
 }
 
+.pos_ab{
+    position: absolute;
+    top: 72px;
+    right: 0;
+}
+
+
 /* Footer */
 
 .footer_top {
@@ -247,6 +254,9 @@
         width: 150px;
     }
 
+    .pos_ab{
+        top: 63px;
+    }
 
     /* Footer */
 
