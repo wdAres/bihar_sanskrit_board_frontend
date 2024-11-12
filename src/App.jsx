@@ -14,6 +14,7 @@ import Admissions from './static/Admissions'
 import './App.css'  // Make sure to import your CSS file
 import Contact from './static/Contact'
 import Results from './static/Results'
+import History from './static/History'
 
 const App = () => {
 
@@ -30,8 +31,9 @@ const App = () => {
           <Route exact path='/about/' element={<About />} />
           <Route exact path='/about/general_info' element={<About />} />
           <Route path='/about/chairman_message' element={<ChairmanMessage />} />
+          <Route path='/about/history' element={<History />} />
           <Route path='/about/objectives' element={<Objectives />} />
-          <Route path='/about/vision' element={<Vision />} />
+          <Route path='/about/aim' element={<Vision />} />
         </Route>
       </Routes>
     </StaticLayout>

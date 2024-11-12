@@ -7,6 +7,7 @@
     "one one one one one one"
     "two two two two two three"
     "four four four four four five"
+    "six six six six six six"
     ;
     gap: 50px;
 
@@ -17,6 +18,7 @@
     "three"
     "four"
     "five"
+    "six"
     ;
     }
 }
@@ -37,6 +39,9 @@
 }
 .box_5{
     grid-area: five;
+}
+.box_6{
+    grid-area: six;
 }
 .h1{
     margin-bottom: 20px;

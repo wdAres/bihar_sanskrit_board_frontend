@@ -10,16 +10,23 @@ const About = () => {
                 path={'Home / About'}
             />
             <AboutLayout>
+                <h1 className="universal_h1">General Information </h1>
                 <p className={'universal_p'}>
-                    The BIHAR SANSKRIT SHIKSHA BOARD is established for holding and conducting an examination at the end of the Secondary School stage, for prescribing course of studies for such examination and for carrying out such other objects and duties as may be considered necessary for the purpose as stated in the Act, Rules and Regulations of the Board.
-                </p>
-                <p className={'universal_p'}>
-                    Normally every year the BIHAR SANSKRIT SHIKSHA BOARD conducts Annual Secondary School Examination in the month of February/March and Supplementary School Examination in the month of August/September on the basis of course/syllabus as prescribed by the state Government.
-                </p>
+                The Bihar Sanskrit Shiksha Board was established for the promotion and propagation of the Sanskrit language. It operates approved Sanskrit schools from Class 1 to Class 10. Examinations for Classes 1 to 9 are conducted at the school level. The examinations for secondary schools are conducted at the board level, which is called the Madhyama (Class 10) annual examination. The control and administrative office for the Madhyama examination and Sanskrit schools from Class 1 to 10 under the board is the Bihar Sanskrit Shiksha Board. The curriculum and syllabus for these schools are determined by the board with the permission of the state government.
 
-                <p className={'universal_p'}>
-                    Apart from the aforesaid Secondary School Examination, the Board also conducts departmental examinations (not on yearly basis) such as Diploma in Physical Education, Certificate in Physical Education and Teachers Training Examination on such terms and condition as laid down by the State Government.
                 </p>
+                <p className='universal_p'>
+                Every year, based on the curriculum set by the Bihar Sanskrit Shiksha Board/state government, the annual secondary examination is held in February/March. The Bihar Sanskrit Shiksha Board was established to conduct secondary school examinations, to determine the curriculum for such examinations, and to fulfill other objectives and duties deemed necessary for the purpose as mentioned in the board's Act, rules, and regulations.
+
+                </p>
+                <p className='universal_p'>
+                Higher secondary and other higher-level examinations are not conducted by the Bihar Sanskrit Shiksha Board.
+                </p>
+                <p className="universal_p">
+                Check COBSE Membership,
+                Recognized by COBSE.
+                </p>
+                <a href="https://www.cobse.org.in/" className='universal_a' target='_blank' >https://www.cobse.org.in/</a>
             </AboutLayout>
         </>
     )

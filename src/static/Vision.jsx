@@ -7,17 +7,17 @@ const Vision = () => {
         <>
             <PageHeader
                 title={'About Us'}
-                path={'Home / Vision'}
+                path={'Home / Aim'}
             />
             <AboutLayout>
-                <h1 className={'universal_h1'}>Our Vision</h1>
+                <h1 className={'universal_h1'}>Our Aim</h1>
                 <p className={'universal_p'}>
-                To perform the premier technology institute recognized for its quality education and human values.
+                To Provide For The Constitution Of An Autonomous
+Board For Development And’ Better Supervision Of
+Sanskrit Education. Up To Madhyama Standard In The
+State Of Bihar
                     </p>
-                <h1 className={'universal_h1'}>Our Mission</h1>
-                <p className={'universal_p'}>
-                Teaching and Research on emerging technologies in a cross cultural environment. Working on enabling technologies for social transformation.
-                   </p>
+               
 
             </AboutLayout>
         </>

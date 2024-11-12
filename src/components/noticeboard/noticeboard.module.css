@@ -1,0 +1,54 @@
+/* Notice Board */
+.notice_board {
+    background: #d2fa932e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.heading {}
+
+.inner_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Notice */
+
+.notice {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notice_icon {
+    font-size: 16px;
+    transition: 0.2s ease-in-out
+}
+
+.notice_p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out
+}
+
+.notice:hover .notice_p,
+.notice:hover .notice_icon{
+    text-decoration: underline;
+    color: blue;
+}
+
+.notice_span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    color: red;
+    font-size: 14px;
+}
