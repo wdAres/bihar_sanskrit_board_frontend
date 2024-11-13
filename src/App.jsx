@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from './components/layoutBased/Header'
-import Footer from './components/layoutBased/Footer'
 import Home from './static/Home'
 import Courses from './static/Courses'
 import { Route, Routes } from 'react-router-dom'

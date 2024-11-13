@@ -12,4 +12,4 @@ const Notice = ({info,date , new : isNew}) => {
   )
 }
 
-export default Notice
+export default Notice 
