@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './layoutBased.module.css'
 import { Link } from 'react-router-dom'
+import ContactForm from '../Forms/ContactForm'
 
 const Footer = () => {
   return (
@@ -28,12 +29,13 @@ const Footer = () => {
             </div>
             <div className={classes.ift_box_3}>
                 <div className={classes.boxed_sub_heading}>Quick Inquiry</div> 
-                <div className={classes.ift_box_3_form}>
+                {/* <div className={classes.ift_box_3_form}>
                     <input type="text" placeholder='Your Name' />
                     <input type="text" placeholder='Email ID' />
                     <textarea placeholder='Message'></textarea>
                     <button>Submit</button>
-                </div>
+                </div> */}
+                <ContactForm cls={classes.ift_box_3_form} />
             </div>
         </div>
     </footer>

@@ -1,63 +1,120 @@
-.section{
+.section {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-inline: auto;
     display: grid;
     grid-template-areas:
-    "one one one one one one"
-    "two two two two two three"
-    "four four four four four five"
-    "six six six six six six"
+        "one one one one one one"
+        "two two two two two three"
+        "four four four four four five"
+        "six six six six six six"
     ;
     gap: 50px;
 
-    @media (width<1000px){
+    @media (width<1000px) {
         grid-template-areas:
-    "one"
-    "two"
-    "three"
-    "four"
-    "five"
-    "six"
-    ;
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+        ;
     }
 }
-.box_1{
+
+.box_1 {
     grid-area: one;
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     background: #fee7bd;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @media (width<1000px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (width<640px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-.box_2{
+
+.box_2 {
     grid-area: two;
 }
-.box_3{
+
+.box_3 {
     grid-area: three;
 }
-.box_4{
+
+.box_4 {
     grid-area: four;
 }
-.box_5{
+
+.box_5 {
     grid-area: five;
 }
-.box_6{
+
+.box_6 {
     grid-area: six;
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+
+    grid-template-areas:
+        "i1 i2"
+        "i3 i3"
+    ;
+
+    @media (width<1000px){
+        grid-template-areas:
+        "i1 i1"
+        "i2 i2"
+        "i3 i3"
+        ;
+    }
+
+    > :nth-child(1) {
+        grid-area: i1;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    > :nth-child(2) {
+        grid-area: i2;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    > :nth-child(3) {
+        grid-area: i3;
+        margin-top: 0;
+        width: 100%;
+    }
 }
-.h1{
+
+.box_6 {}
+
+.h1 {
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: 400;
 }
+
 .p {
     color: #666666;
     font-size: 15px;
     line-height: 36px;
     margin-bottom: 20px;
 }
-.a{
+
+.a {
     text-decoration: none;
     color: blue;
 }
+
 .boxed_sub_heading {
     border: 1px solid #222222;
     color: #222222;
@@ -66,6 +123,7 @@
     font-weight: 600;
     margin-bottom: 30px;
 }
+
 .box_5_form {
     display: flex;
     flex-direction: column;
@@ -99,14 +157,16 @@
     text-transform: uppercase;
 }
 
-.box_3_links{
+.box_3_links {
     display: flex;
     flex-direction: column;
 }
-.box_3_links > a:nth-child(1){
+
+.box_3_links>a:nth-child(1) {
     border-top: 1px solid #e3e3e3;
 }
-.box_3_link{
+
+.box_3_link {
     border-bottom: 1px solid #e3e3e3;
     height: 45px;
     display: flex;
@@ -117,15 +177,40 @@
     transition: 0.2s ease-in-out;
 }
 
-.box_3_link:hover{
+.box_3_link:hover {
     color: black;
 }
 
 
+.card {
+    grid-column: span 1;
+}
+
+.card_img {
+    width: 100%;
+    height: 260px;
+    background: rgb(206, 206, 206);
+}
+
+.card_details {
+    margin-top: 10px;
+}
+
+.card_details h1 {
+    font-size: 17px;
+    color: black;
+}
+
+.card_details p {
+    font-size: 13px;
+    color: #646464;
+    margin-top: 5px;
+}
+
 
 /* Contact Section */
 
-.another_section{
+.another_section {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-inline: auto;

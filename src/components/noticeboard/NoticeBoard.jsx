@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './noticeboard.module.css'
 import Notice from './Notice';
 
-const NoticeBoard = () => {
+const NoticeBoard = ({heading}) => {
 
     const announcements = [
         { date: '24-10-2024', info: '(PM -USP CSSS) सेंट्रल सेक्टर स्कीम ऑफ स्कालरशिप फॉर कॉलेज एंड यूनिवर्सिटी स्टूडेंट्स', new: true },
@@ -18,7 +18,7 @@ const NoticeBoard = () => {
 
     return (
         <div className={classes.notice_board}>
-            <h2 className={classes.heading}>Notice Board</h2>
+            <h2 className={classes.heading}>{heading}</h2>
             <div className={classes.inner_container}>
                 {announcements?.map((element,index)=>(
                     <Notice key={index} {...element} />

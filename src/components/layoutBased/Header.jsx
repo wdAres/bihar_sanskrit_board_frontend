@@ -17,6 +17,13 @@ const Header = ({openSidebar}) => {
             <NavLink className={classes.header_nav_link} to="/authorised_centers">Authorised Centers</NavLink>
             <NavLink className={classes.header_nav_link} to="/results">Results</NavLink>
             <NavLink className={classes.header_nav_link} to="/contact">Contact Us</NavLink>
+           <div className={`${classes.header_nav_link} ${classes.db_links}`}>
+           Dashboard Links 
+           <div className={classes.hidden_links}>
+           <a target='_blank' href='https://biharsanskritboardcenter.netlify.app' className={classes.header_nav_link} to="/contact">School Login</a>
+           <a target='_blank' href='https://biharsanskritboardadmin.netlify.app' className={classes.header_nav_link} to="/contact">Board Login</a>
+           </div>
+           </div>
         </nav>
         <button className={classes.ham_burger_menu}>
             <RxHamburgerMenu onClick={openSidebar} size={20} />

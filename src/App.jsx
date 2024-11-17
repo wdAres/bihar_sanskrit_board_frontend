@@ -13,6 +13,9 @@ import './App.css'  // Make sure to import your CSS file
 import Contact from './static/Contact'
 import Results from './static/Results'
 import History from './static/History'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
 
@@ -34,6 +37,14 @@ const App = () => {
           <Route path='/about/aim' element={<Vision />} />
         </Route>
       </Routes>
+      <ToastContainer
+                position='top-right'
+                autoClose='1000'
+                closeOnClick
+                pauseOnHover={false}
+                draggable
+                theme="light"
+            />
     </StaticLayout>
   );
 };

@@ -25,7 +25,7 @@
 }
 
 .header_nav_link {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     color: #181717;
@@ -233,6 +233,21 @@
     color: black;
     font-weight: 500;
     padding-left: 32px;
+}
+
+.db_links:hover .hidden_links{
+display: flex !important;
+}
+.hidden_links{
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    background: #e7f4ff;
+}
+
+.hidden_links > a{
+    border: none !important;
 }
 
 @media screen and (max-width:1000px) {

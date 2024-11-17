@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader/PageHeader'
 import classes from './Contact.module.css'
+import ContactForm from '../components/Forms/ContactForm'
 
 const Contact = () => {
     return (
@@ -25,13 +26,14 @@ const Contact = () => {
                 </div>
                 <div className={classes.right_box}>
                     <h1 className='universal_h1'>Contact Us</h1>
-                    <div className={classes.right_box_form}>
+                    {/* <div className={classes.right_box_form}>
                         <input type="text" placeholder='Name' />
                         <input type="text" placeholder='Email ID' />
                         <input type="text" placeholder='Subject' />
                         <textarea placeholder='Message'></textarea>
                         <button>Submit</button>
-                    </div>
+                    </div> */}
+                    <ContactForm />
                 </div>
             </section>
         </>

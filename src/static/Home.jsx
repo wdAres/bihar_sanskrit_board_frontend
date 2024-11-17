@@ -1,25 +1,45 @@
 import React from 'react'
 import classes from './Home.module.css'
 import NoticeBoard from '../components/noticeboard/NoticeBoard'
+import ContactForm from '../components/Forms/ContactForm'
 
 const Home = () => {
     return (
         <section className={`${classes.section} universal_width`}>
-            <div className={classes.box_1}  alt="" ></div>
-            <div className={`${classes.box_2}`}>
-                <h1 className={classes.h1}> Check COBSE Membership</h1>
-                <p className={classes.p}>BIHAR SANSKRIT SHIKSHA BOARD has established to promote Secondary & Senior Secondary Education with motto to achieve complete literacy in India. EDUCATION FOR ALL is a basic aims of the BIHAR SANSKRIT SHIKSHA BOARD. BIHAR SANSKRIT SHIKSHA BOARD associates & facilitate to other organizations of similar aims and objects to achieve AIMS of BSEKANT SPN UP. The BIHAR SANSKRIT SHIKSHA BOARD is providing freedom of subject choice to the student.</p>
-            </div>
-            <div className={`${classes.box_3}`}>
-                <div className={classes.boxed_sub_heading}>Student Corner</div>
-                <div className={classes.box_3_links}>
-                    <a href="#!" className={classes.box_3_link}>Admission Details</a>
-                    <a href="#!" className={classes.box_3_link}>Course Offered</a>
-                    <a href="#!" className={classes.box_3_link}>Exam Results</a>
-                    <a href="#!" className={classes.box_3_link}>Online Verification</a>
+            <div className={classes.box_1}  alt="" >
+                <div className={classes.card}>
+                    <img className={classes.card_img} src="./images/cm.jpg" alt="" />
+                    <div className={classes.card_details}>
+                        <h1>Nitish Kumar</h1>
+                        <p>Hon'ble Chief Minister</p>
+                    </div>
                 </div>
+                <div className={classes.card}>
+                    <img className={classes.card_img} src="./images/em.jpg" alt="" />
+                    <div className={classes.card_details}>
+                        <h1>Sunil Kumar</h1>
+                        <p>Hon'ble Education Minister</p>
+                    </div>
+                </div>
+                <div className={classes.card}>
+                    <img className={classes.card_img} src="./images/ed.jpg" alt="" />
+                    <div className={classes.card_details}>
+                        <h1>Name ?</h1>
+                        <p>Hon'ble Secretary, Education Department, Government Of Bihar
+                        & Administrator of Bihar Sanskrit Shiksha Board.</p>
+                    </div>
+                </div>
+                <div className={classes.card}>
+                    {/* <img className={classes.card_img} src="./images/ed.jpg" alt="" /> */}
+                    <div className={classes.card_img}></div>
+                    <div className={classes.card_details}>
+                        <h1>Neeraj Kumar</h1>
+                        <p>Secretory, Bihar Sanskrit Shiksha Board</p>
+                    </div>
+                </div>
+               
             </div>
-            <div className={`${classes.box_4}`}>
+            <div className={`${classes.box_2}`}>
             <h1 className={classes.h1}>About Us</h1>
                 <p className={classes.p}>
                 The Bihar Sanskrit Shiksha Board was established for the promotion and propagation of the Sanskrit language. It operates approved Sanskrit schools from Class 1 to Class 10. Examinations for Classes 1 to 9 are conducted at the school level. The examinations for secondary schools are conducted at the board level, which is called the Madhyama (Class 10) annual examination. The control and administrative office for the Madhyama examination and Sanskrit schools from Class 1 to 10 under the board is the Bihar Sanskrit Shiksha Board. The curriculum and syllabus for these schools are determined by the board with the permission of the state government.
@@ -34,17 +54,38 @@ const Home = () => {
                 </p>
               
             </div>
+            <div className={`${classes.box_3}`}>
+                <div className={classes.boxed_sub_heading}>Student Corner</div>
+                <div className={classes.box_3_links}>
+                    <a href="#!" className={classes.box_3_link}>Admission Details</a>
+                    <a href="#!" className={classes.box_3_link}>Course Offered</a>
+                    <a href="#!" className={classes.box_3_link}>Exam Results</a>
+                    <a href="#!" className={classes.box_3_link}>Online Verification</a>
+                </div>
+            </div>
+            <div className={`${classes.box_4}`}>
+                <h1 className={classes.h1}> Check COBSE Membership</h1>
+                <p className={classes.p}>
+                COBSE is consortium of all Boards of School Education in India . COBSE is coordinate with different Boards , Different States of Ministry of Education , Ministry of HRD , Govt. of India and different State Govt. to promote and propagate school education upholding the true spirit of ‘ right to education ‘ of Govt. of India . COBSE is established and incorporated as a legal entity Under Government of India Act. COBSE is non-profit and autonomous organization which work for the all education Boards / Councils of India .The major function of Board is Consortium of all Boards of School Education in India ( Educational Boards / Educational Councils / Universities ) in all States of India. COBSE works for the guidance to All Boards of School Education in India for Quality Control , Proper guidance of education system of India , for the welfare of disadvantaged , street children, women , poor and minority people and its is a the promotion of school education including curriculum reforms and improvement of educational systems. COBSE also help to education Boards in preparing quality syllabus and course materials in accordance with National curriculum framework 2005 prepared by NCERT.
+                </p>
+                <p className={classes.p}>Check COBSE Membership, Recognized by COBSE.</p> 
+                <a href="https://www.cobse.org.in/" target='_blank'>https://www.cobse.org.in/</a>
+            </div>
+           
             <div className={`${classes.box_5}`}>
                 <div className={classes.boxed_sub_heading}>Quick Inquiry</div>
-                <div className={classes.box_5_form}>
+                {/* <div className={classes.box_5_form}>
                     <input type="text" placeholder='Your Name' />
                     <input type="text" placeholder='Email ID' />
                     <textarea placeholder='Message'></textarea>
                     <button>Submit</button>
-                </div>
+                </div> */}
+                <ContactForm />
             </div>
             <div className={classes.box_6}>
-            <NoticeBoard />
+            <NoticeBoard heading={'Notice'} />
+            <NoticeBoard heading={'Important Links'} />
+            <NoticeBoard heading={'Tender'} />
             </div>
         </section>
     )
