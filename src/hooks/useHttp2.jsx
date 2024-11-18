@@ -1,67 +1,138 @@
-import React, { useCallback, useState } from 'react'
+// import React, { useCallback, useState } from 'react'
+// import { toast } from 'react-toastify';
+// import Cookies from 'js-cookie';
+// import { base_url } from '../utils/base_url';
+
+
+// const useHttp2 = () => {
+
+
+//     const [isLoading, setLoading] = useState(false)
+//     const current_user = Cookies.get('admin') ? JSON.parse(Cookies.get('admin')) : null 
+//     let token = current_user?.token
+//     const [error, setError] = useState(null)
+
+//     const sendRequest = useCallback(async (reqConfig, setterFuntion, needToast) => {
+
+//         setLoading(true)
+
+//         const baseUrl = `${base_url}/${reqConfig.url}`
+//         const myToast = needToast && toast.loading('Please Wait...')
+//         try {
+//             const req = await fetch(baseUrl, {
+//                 method: reqConfig.method || 'GET',
+//                 headers: reqConfig.headers || { 'Content-type': 'application/json', 'Authorization': `Bearer ${token}` },
+//                 body: reqConfig.body ? JSON.stringify(reqConfig.body) : null,
+//             })
+
+//             const resp = await req.json()
+
+//             if (!resp.success) {
+//                 setError(resp)
+//                 throw new Error(resp.message)
+//             }
+
+//             if (needToast) {
+//                 toast.update(myToast, {
+//                     render: resp.message,
+//                     type: 'success',
+//                     isLoading: false,
+//                     autoClose: 1500,
+//                     pauseOnHover:false,
+//                     closeOnClick:true
+//                 });
+//             }
+
+//             setterFuntion(resp)
+//         } catch (error) {
+
+//             toast.update(myToast, {
+//                 render: error.message,
+//                 type: 'error',
+//                 isLoading: false,
+//                 autoClose: 1500,
+//                 closeOnClick:true,
+//                 pauseOnHover:false
+//             })
+
+//         }
+//         finally {
+//             setLoading(false)
+//         }
+
+
+//     }, []);
+
+//     return {
+//         isLoading,
+//         sendRequest,
+//         error
+//     };
+// }
+
+// export default useHttp2
+
+
+import React, { useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
+import axios from 'axios';
 import { base_url } from '../utils/base_url';
 
-
 const useHttp2 = () => {
+    const [isLoading, setLoading] = useState(false);
+    const current_user = Cookies.get('admin') ? JSON.parse(Cookies.get('admin')) : null;
+    let token = current_user?.token;
+    const [error, setError] = useState(null);
 
+    const sendRequest = useCallback(async (reqConfig, setterFunction, needToast) => {
+        setLoading(true);
 
-    const [isLoading, setLoading] = useState(false)
-    const current_user = Cookies.get('admin') ? JSON.parse(Cookies.get('admin')) : null 
-    let token = current_user?.token
-    const [error, setError] = useState(null)
-
-    const sendRequest = useCallback(async (reqConfig, setterFuntion, needToast) => {
-
-        setLoading(true)
-
-        const baseUrl = `${base_url}/${reqConfig.url}`
-        const myToast = needToast && toast.loading('Please Wait...')
+        const baseUrl = `${base_url}/${reqConfig.url}`;
+        const myToast = needToast && toast.loading('Please Wait...');
+        
         try {
-            const req = await fetch(baseUrl, {
+            const response = await axios({
+                url: baseUrl,
                 method: reqConfig.method || 'GET',
-                headers: reqConfig.headers || { 'Content-type': 'application/json', 'Authorization': `Bearer ${token}` },
-                body: reqConfig.body ? JSON.stringify(reqConfig.body) : null,
-            })
+                headers: reqConfig.headers || { 
+                    'Content-Type': 'application/json', 
+                    'Authorization': `Bearer ${token}` 
+                },
+                data: reqConfig.body || null,
+            });
 
-            const resp = await req.json()
-
-            if (!resp.success) {
-                setError(resp)
-                throw new Error(resp.message)
+            if (!response.data.success) {
+                setError(response.data);
+                throw new Error(response.data.message);
             }
 
             if (needToast) {
                 toast.update(myToast, {
-                    render: resp.message,
+                    render: response.data.message,
                     type: 'success',
                     isLoading: false,
                     autoClose: 1500,
-                    pauseOnHover:false,
-                    closeOnClick:true
+                    pauseOnHover: false,
+                    closeOnClick: true
                 });
             }
 
-            setterFuntion(resp)
+            setterFunction(response.data);
         } catch (error) {
-
             toast.update(myToast, {
                 render: error.message,
                 type: 'error',
                 isLoading: false,
                 autoClose: 1500,
-                closeOnClick:true,
-                pauseOnHover:false
-            })
-
+                closeOnClick: true,
+                pauseOnHover: false
+            });
+            setError(error);
+        } finally {
+            setLoading(false);
         }
-        finally {
-            setLoading(false)
-        }
-
-
-    }, []);
+    }, [token]);
 
     return {
         isLoading,
@@ -70,4 +141,4 @@ const useHttp2 = () => {
     };
 }
 
-export default useHttp2
+export default useHttp2;
