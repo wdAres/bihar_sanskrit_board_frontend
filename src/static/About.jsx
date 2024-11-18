@@ -26,7 +26,9 @@ const About = () => {
                 Check COBSE Membership,
                 Recognized by COBSE.
                 </p>
-                <a href="https://www.cobse.org.in/" className='universal_a' target='_blank' >https://www.cobse.org.in/</a>
+                <a className='universal_a' href="https://www.cobse.org.in/" target='_blank'>https://www.cobse.org.in/</a>
+                <p className={classes.p}></p>
+                <a className='universal_a' href="cbose.pdf" download={true} target='_blank'>Download File</a>
             </AboutLayout>
         </>
     )

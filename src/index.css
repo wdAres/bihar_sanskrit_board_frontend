@@ -35,6 +35,15 @@ body{
   margin-bottom: 20px;
 }
 
+.universal_a {
+  font-size: 15px;
+  color: #6ad4ff;
+  display: block;
+  font-weight: 500;
+}
+
+
+
 @media screen and (max-width:1230px) {
   .universal_width {
     padding-inline: 50px;

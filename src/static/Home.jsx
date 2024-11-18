@@ -10,21 +10,21 @@ const Home = () => {
                 <div className={classes.card}>
                     <img className={classes.card_img} src="./images/cm.jpg" alt="" />
                     <div className={classes.card_details}>
-                        <h1>Nitish Kumar</h1>
+                        <h1>Sri Nitish Kumar</h1>
                         <p>Hon'ble Chief Minister</p>
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <img className={classes.card_img} src="./images/em.jpg" alt="" />
+                    <img className={classes.card_img} src="./images/sunil_kumar.jpeg" alt="" />
                     <div className={classes.card_details}>
-                        <h1>Sunil Kumar</h1>
+                        <h1>Sri Sunil Kumar</h1>
                         <p>Hon'ble Education Minister</p>
                     </div>
                 </div>
                 <div className={classes.card}>
                     <img className={classes.card_img} src="./images/ed.jpg" alt="" />
                     <div className={classes.card_details}>
-                        <h1>Name ?</h1>
+                        <h1>Sri Baidya Nath Yadav</h1>
                         <p>Hon'ble Secretary, Education Department, Government Of Bihar
                         & Administrator of Bihar Sanskrit Shiksha Board.</p>
                     </div>
@@ -33,7 +33,7 @@ const Home = () => {
                     {/* <img className={classes.card_img} src="./images/ed.jpg" alt="" /> */}
                     <div className={classes.card_img}></div>
                     <div className={classes.card_details}>
-                        <h1>Neeraj Kumar</h1>
+                        <h1>Sri Neeraj Kumar</h1>
                         <p>Secretory, Bihar Sanskrit Shiksha Board</p>
                     </div>
                 </div>
@@ -69,7 +69,9 @@ const Home = () => {
                 COBSE is consortium of all Boards of School Education in India . COBSE is coordinate with different Boards , Different States of Ministry of Education , Ministry of HRD , Govt. of India and different State Govt. to promote and propagate school education upholding the true spirit of ‘ right to education ‘ of Govt. of India . COBSE is established and incorporated as a legal entity Under Government of India Act. COBSE is non-profit and autonomous organization which work for the all education Boards / Councils of India .The major function of Board is Consortium of all Boards of School Education in India ( Educational Boards / Educational Councils / Universities ) in all States of India. COBSE works for the guidance to All Boards of School Education in India for Quality Control , Proper guidance of education system of India , for the welfare of disadvantaged , street children, women , poor and minority people and its is a the promotion of school education including curriculum reforms and improvement of educational systems. COBSE also help to education Boards in preparing quality syllabus and course materials in accordance with National curriculum framework 2005 prepared by NCERT.
                 </p>
                 <p className={classes.p}>Check COBSE Membership, Recognized by COBSE.</p> 
-                <a href="https://www.cobse.org.in/" target='_blank'>https://www.cobse.org.in/</a>
+                <a className='universal_a' href="https://www.cobse.org.in/" target='_blank'>https://www.cobse.org.in/</a>
+                <p className={classes.p}></p>
+                <a className='universal_a' href="cbose.pdf" download={true} target='_blank'>Download File</a>
             </div>
            
             <div className={`${classes.box_5}`}>
