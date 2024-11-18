@@ -1,5 +1,4 @@
 [[redirects]]
-  from = "https://biharsanskritboard.netlify.app/*"
-  to = "http://biharsanskritboard.netlify.app/:splat"
-  status = 301
-  force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
