@@ -38,13 +38,13 @@ const App = () => {
         </Route>
       </Routes>
       <ToastContainer
-                position='top-right'
-                autoClose='1000'
-                closeOnClick
-                pauseOnHover={false}
-                draggable
-                theme="light"
-            />
+        position='top-right'
+        autoClose='1000'
+        closeOnClick
+        pauseOnHover={false}
+        draggable
+        theme="light"
+      />
     </StaticLayout>
   );
 };
