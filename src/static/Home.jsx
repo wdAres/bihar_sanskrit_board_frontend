@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './Home.module.css'
 import NoticeBoard from '../components/noticeboard/NoticeBoard'
 import ContactForm from '../components/Forms/ContactForm'
+import useHttp2 from '../hooks/useHttp2'
 
 const Home = () => {
+
+    const [noticeData,setNoticeData] = useState([])
+    const [tenderData,setTenderData] = useState([])
+    const [linkData,setLinkData] = useState([])
+    const {sendRequest:getNotice,isLoading:noticeLoading} = useHttp2()
+    const {sendRequest:getLink,isLoading:linkLoading} = useHttp2()
+    const {sendRequest:getTender,isLoading:tenderLoading} = useHttp2()
+    useEffect(()=>{
+        getNotice({url:'notice'},res=>{
+            setNoticeData(res.data.docs)
+        })
+        getTender({url:'tender'},res=>{
+            setTenderData(res.data.docs)
+        })
+        getLink({url:'important-link'},res=>{
+            setLinkData(res.data.docs)
+        })
+    },[])
+
     return (
         <section className={`${classes.section} universal_width`}>
             <div className={classes.box_1}  alt="" >
@@ -85,9 +105,9 @@ const Home = () => {
                 <ContactForm />
             </div>
             <div className={classes.box_6}>
-            <NoticeBoard heading={'Notice'} />
-            <NoticeBoard heading={'Important Links'} />
-            <NoticeBoard heading={'Tender'} />
+            <NoticeBoard data={noticeData} loading={noticeLoading} heading={'Notice'} />
+            <NoticeBoard data={linkData} loading={linkLoading} heading={'Important Links'} />
+            <NoticeBoard data={tenderData} loading={tenderLoading} heading={'Tender'} />
             </div>
         </section>
     )
