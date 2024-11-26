@@ -28,21 +28,21 @@ const Home = () => {
         <section className={`${classes.section} universal_width`}>
             <div className={classes.box_1}  alt="" >
                 <div className={classes.card}>
-                    <img className={classes.card_img} src="./images/cm.jpg" alt="" />
+                    <img className={classes.card_img} src="./images/cm1.png" alt="" />
                     <div className={classes.card_details}>
                         <h1>Sri Nitish Kumar</h1>
                         <p>Hon'ble Chief Minister</p>
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <img className={classes.card_img} src="./images/sunil_kumar.jpeg" alt="" />
+                    <img className={classes.card_img} src="./images/em1.png" alt="" />
                     <div className={classes.card_details}>
                         <h1>Sri Sunil Kumar</h1>
                         <p>Hon'ble Education Minister</p>
                     </div>
                 </div>
                 <div className={classes.card}>
-                    <img className={classes.card_img} src="./images/ed.jpg" alt="" />
+                    <img className={classes.card_img} src="./images/ed1.png" alt="" />
                     <div className={classes.card_details}>
                         <h1>Sri Baidya Nath Yadav</h1>
                         <p>Hon'ble Secretary, Education Department, Government Of Bihar
