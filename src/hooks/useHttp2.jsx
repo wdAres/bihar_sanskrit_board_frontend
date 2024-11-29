@@ -81,8 +81,8 @@ import { BASE_URL } from '../utils/BASE_URL';
 
 const useHttp2 = () => {
     const [isLoading, setLoading] = useState(false);
-    const current_user = Cookies.get('admin') ? JSON.parse(Cookies.get('admin')) : null;
-    let token = current_user?.token;
+    const current_user = Cookies.get('website') ? JSON.parse(Cookies.get('website')) : null;
+    let token = current_user?.token || '';
     const [error, setError] = useState(null);
 
     const sendRequest = useCallback(async (reqConfig, setterFunction, needToast) => {
