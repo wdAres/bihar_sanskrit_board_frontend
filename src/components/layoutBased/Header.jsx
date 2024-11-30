@@ -20,8 +20,8 @@ const Header = ({openSidebar}) => {
            <div className={`${classes.header_nav_link} ${classes.db_links}`}>
            Dashboard Links 
            <div className={classes.hidden_links}>
-           <a target='_blank' href='https://biharsanskritboardcenter.netlify.app' className={classes.header_nav_link} to="/contact">School Login</a>
-           <a target='_blank' href='https://biharsanskritboardadmin.netlify.app' className={classes.header_nav_link} to="/contact">Board Login</a>
+           <a target='_blank' href='http://13.127.79.175:8082/login' className={classes.header_nav_link} to="/contact">School Login</a>
+           <a target='_blank' href='http://13.127.79.175:8083/login' className={classes.header_nav_link} to="/contact">Board Login</a>
            </div>
            </div>
         </nav>

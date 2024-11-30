@@ -15,13 +15,13 @@ const Sidebar = ({ closeSidebar, sidebar }) => {
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/general_info'}>- General Information</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/chairman_message'}>- Chairman's Message</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/objectives'}>- Objectives</Link>
-          <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/vision'}>- Vision & Mission</Link>
+          <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/aim'}>- Vision & Mission</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/admissions'}>Admissions</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/authorised_centers'}>Authorised Centers</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/courses'}>Courses</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/results'}>Results</Link>
-          <a target='_blank' className={classes.sidebar_link} href={'https://biharsanskritboardcenter.netlify.app'}>School Login</a>
-          <a target='_blank' className={classes.sidebar_link} href={'https://biharsanskritboardadmin.netlify.app'}>Board Login</a>
+          <a target='_blank' className={classes.sidebar_link} href={'http://13.127.79.175:8082/login'}>School Login</a>
+          <a target='_blank' className={classes.sidebar_link} href={'http://13.127.79.175:8083/login'}>Board Login</a>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/results'}>Results</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/contact'}>Contact</Link>
         </nav>
