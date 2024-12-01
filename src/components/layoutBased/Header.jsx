@@ -8,10 +8,16 @@ const Header = ({openSidebar}) => {
   return (
     <header className={classes.header}>
         <div className={`${classes.inner_header} universal_width`}>
-        <a className={classes.header_logo} href="#!"><img src="/images/logo.png" alt="" /></a>
+        <a className={classes.header_logo} href="#!">
+          <img src="/images/bssp_logo.png" alt="" />
+          <div className={classes.header_logo_inner_div}>
+            <h4>Bihar Sanskrit</h4>
+            <h6>Education Board Patna</h6>
+          </div>
+          </a>
         <nav className={classes.header_nav}>
             <NavLink to={'/'} className={classes.header_nav_link}>Home</NavLink>
-            <NavLink to={'/courses'} className={classes.header_nav_link}>Courses</NavLink>
+            <NavLink to={'/courses'} className={classes.header_nav_link}>Academic</NavLink>
             <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink>
             <NavLink className={classes.header_nav_link} to="/admissions">Admissons</NavLink>
             <NavLink className={classes.header_nav_link} to="/authorised_centers">Authorised Centers</NavLink>
@@ -26,7 +32,7 @@ const Header = ({openSidebar}) => {
            </div>
         </nav>
         <button className={classes.ham_burger_menu}>
-            <RxHamburgerMenu onClick={openSidebar} size={20} />
+            <RxHamburgerMenu color='white' onClick={openSidebar} size={20} />
         </button>
         <div className={classes.pos_ab}>
         <GoogleTranslate />

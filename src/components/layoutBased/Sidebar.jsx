@@ -15,7 +15,9 @@ const Sidebar = ({ closeSidebar, sidebar }) => {
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/general_info'}>- General Information</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/chairman_message'}>- Chairman's Message</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/objectives'}>- Objectives</Link>
-          <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/aim'}>- Vision & Mission</Link>
+          {/* <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/aim'}>- Vision & Mission</Link> */}
+          <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/admissions'}>Admissions</Link>
+          <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/rules'}>- Rules & Regulations</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/admissions'}>Admissions</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/authorised_centers'}>Authorised Centers</Link>
           <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/courses'}>Courses</Link>

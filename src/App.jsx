@@ -15,6 +15,7 @@ import Results from './static/Results'
 import History from './static/History'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Rules from './static/Rules'
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path='/about/history' element={<History />} />
           <Route path='/about/objectives' element={<Objectives />} />
           <Route path='/about/aim' element={<Vision />} />
+          <Route path='/about/rules' element={<Rules />} />
         </Route>
       </Routes>
       <ToastContainer
