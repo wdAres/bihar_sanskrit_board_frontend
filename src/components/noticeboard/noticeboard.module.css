@@ -64,3 +64,21 @@
     gap: 20px;
 }
 
+.view_more {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.view_more button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #75b4f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view_more button:hover {
+    background-color: #0056b3;
+}

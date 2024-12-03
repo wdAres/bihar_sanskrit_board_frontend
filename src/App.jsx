@@ -17,6 +17,9 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Rules from './static/Rules'
 import ScrollToTop from './components/Forms/ScrollToTop'
+import AllNotice from './static/AllNotice'
+import AllTender from './static/AllTender'
+import AllImportantLinks from './static/AllImportantLinks'
 
 
 const App = () => {
@@ -32,6 +35,9 @@ const App = () => {
         <Route path='/admissions' element={<Admissions />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/results' element={<Results />} />
+        <Route path='/notices' element={<AllNotice />} />
+        <Route path='/tenders' element={<AllTender />} />
+        <Route path='/important-links' element={<AllImportantLinks />} />
         <Route path='/about'>
           <Route exact path='/about/' element={<About />} />
           <Route exact path='/about/general_info' element={<About />} />

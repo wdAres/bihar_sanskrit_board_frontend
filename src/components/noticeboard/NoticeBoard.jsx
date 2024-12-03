@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 import classes from './noticeboard.module.css'
 import Notice from './Notice';
 import './NoticeBoard.css';
+import { useNavigate } from 'react-router-dom';
 import { IoDocumentAttachOutline } from 'react-icons/io5';
 import NoticeCard from './NoticeCard';
 const NoticeBoard = ({heading,data,loading}) => {
+    const navigate = useNavigate();
+    const handleViewMore = () => {
+        if (heading === 'Notice') navigate('/notices');
+        if (heading === 'Important Links') navigate('/important-links');
+        if (heading === 'Tender') navigate('/tenders');
+    };
     const [rows, setRows] = useState(1);
     // const announcements = [
     //     { date: '24-10-2024', info: '(PM -USP CSSS) सेंट्रल सेक्टर स्कीम ऑफ स्कालरशिप फॉर कॉलेज एंड यूनिवर्सिटी स्टूडेंट्स', new: true },
@@ -30,27 +37,29 @@ const NoticeBoard = ({heading,data,loading}) => {
     // )
 
 
-    const demo_data = [
-        {
-            id:1,
-            label:'This is a very important document',
-            file:true
-        },
-        {
-            id:2,
-            label:'This is a very important file',
-            url:true
-        },
-    ]
-
 
     return (
-        <div className={classes.notice_board} >
+        // <div className={classes.notice_board} >
+        //     <h2 className={classes.heading}>{heading}</h2>
+        //     <div className={classes.grid}>
+        //         {loading ? 'Loading' : data?.length > 0 ? data?.map((element,index)=>(
+        //             <NoticeCard key={index} {...element} />
+        //         )) : 'No Data Found!'}
+        //     </div>  
+        // </div>
+        <div className={classes.notice_board}>
             <h2 className={classes.heading}>{heading}</h2>
             <div className={classes.grid}>
-                {loading ? 'Loading' : data?.length > 0 ? data?.map((element,index)=>(
-                    <NoticeCard key={index} {...element} />
-                )) : 'No Data Found!'}
+                {loading ? (
+                    'Loading'
+                ) : data?.length > 0 ? (
+                    data.map((element, index) => <NoticeCard key={index} {...element} />)
+                ) : (
+                    'No Data Found!'
+                )}
+            </div>
+            <div className={classes.view_more}>
+                <button onClick={handleViewMore}>View More</button>
             </div>
         </div>
     );
