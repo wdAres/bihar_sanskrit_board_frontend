@@ -18,7 +18,18 @@ const Header = ({openSidebar}) => {
         <nav className={classes.header_nav}>
             <NavLink to={'/'} className={classes.header_nav_link}>Home</NavLink>
             <NavLink to={'/courses'} className={classes.header_nav_link}>Academic</NavLink>
-            <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink>
+            {/* <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink> */}
+            <div className={`${classes.header_nav_link} ${classes.db_links}`}>
+            About
+           <div className={classes.hidden_links}>
+           <NavLink to={'/about/general_info'} className={classes.header_nav_link}>General Information</NavLink>
+                    <NavLink to={'/about/chairman_message'} className={classes.header_nav_link}>Chairman's Message</NavLink>
+                    <NavLink to={'/about/history'} className={classes.header_nav_link}>History</NavLink>
+                    <NavLink to={'/about/rules'} className={classes.header_nav_link}>Rules & Regulations</NavLink>
+                    {/* <NavLink to={'/about/objectives'} className={classes.header_nav_link}>Objectives</NavLink> */}
+                    <NavLink to={'/about/aim'} className={classes.header_nav_link}>Aim</NavLink>
+           </div>
+           </div>
             <NavLink className={classes.header_nav_link} to="/admissions">Admissons</NavLink>
             <NavLink className={classes.header_nav_link} to="/authorised_centers">Authorised Centers</NavLink>
             <NavLink className={classes.header_nav_link} to="/results">Results</NavLink>

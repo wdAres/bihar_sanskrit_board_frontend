@@ -16,13 +16,16 @@ import History from './static/History'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Rules from './static/Rules'
+import ScrollToTop from './components/Forms/ScrollToTop'
 
 
 const App = () => {
 
   return (
     <StaticLayout>
+      <ScrollToTop/>
       <Routes>
+          
         <Route exact path='/' element={<Home />} />
         <Route path='/courses' element={<Courses />} />
         <Route path='/authorised_centers' element={<AuthorisedCenters />} />
@@ -38,6 +41,7 @@ const App = () => {
           <Route path='/about/aim' element={<Vision />} />
           <Route path='/about/rules' element={<Rules />} />
         </Route>
+
       </Routes>
       <ToastContainer
         position='top-right'

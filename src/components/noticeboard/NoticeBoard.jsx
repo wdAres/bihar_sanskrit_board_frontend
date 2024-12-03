@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react';
 import classes from './noticeboard.module.css'
 import Notice from './Notice';
-
+import './NoticeBoard.css';
+import { IoDocumentAttachOutline } from 'react-icons/io5';
+import NoticeCard from './NoticeCard';
 const NoticeBoard = ({heading,data,loading}) => {
-
+    const [rows, setRows] = useState(1);
     // const announcements = [
     //     { date: '24-10-2024', info: '(PM -USP CSSS) सेंट्रल सेक्टर स्कीम ऑफ स्कालरशिप फॉर कॉलेज एंड यूनिवर्सिटी स्टूडेंट्स', new: true },
     //     { date: '03-09-2024', info: 'Regarding promotion of women incentive scheme for higher education', new: false },
@@ -16,16 +18,46 @@ const NoticeBoard = ({heading,data,loading}) => {
     // ];
 
 
+    // return (
+    //     <div className={classes.notice_board}>
+    //      <h2 className={classes.heading}>{heading}</h2>
+    //         <div className={classes.inner_container}>
+    //             {loading ? 'Loading' : data?.length > 0 ? data?.map((element,index)=>(
+    //                 <Notice key={index} {...element} />
+    //             )) : 'No Data Found!'}
+    //         </div>
+    //     </div>
+    // )
+
+
+    const demo_data = [
+        {
+            id:1,
+            label:'This is a very important document',
+            file:true
+        },
+        {
+            id:2,
+            label:'This is a very important file',
+            url:true
+        },
+    ]
+
+
     return (
-        <div className={classes.notice_board}>
+        <div className={classes.notice_board} >
             <h2 className={classes.heading}>{heading}</h2>
-            <div className={classes.inner_container}>
+            <div className={classes.grid}>
                 {loading ? 'Loading' : data?.length > 0 ? data?.map((element,index)=>(
-                    <Notice key={index} {...element} />
+                    <NoticeCard key={index} {...element} />
                 )) : 'No Data Found!'}
             </div>
         </div>
-    )
-}
+    );
+};
+
+
+    
+
 
 export default NoticeBoard

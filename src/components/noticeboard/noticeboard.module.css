@@ -1,6 +1,7 @@
 /* Notice Board */
 .notice_board {
-    background: #d2fa932e;
+    /* background: #d2fa932e; */
+    background: #063180;
     padding: 20px;
     border-radius: 10px;
     margin-top: 70px;
@@ -9,7 +10,9 @@
     row-gap: 30px;
 }
 
-.heading {}
+.heading{
+    color: yellow;
+}
 
 .inner_container {
     display: flex;
@@ -40,7 +43,7 @@
 }
 
 .notice:hover .notice_p,
-.notice:hover .notice_icon{
+.notice:hover .notice_icon {
     text-decoration: underline;
     color: blue;
 }
@@ -52,3 +55,12 @@
     color: red;
     font-size: 14px;
 }
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+

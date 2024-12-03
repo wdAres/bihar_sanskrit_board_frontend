@@ -41,7 +41,8 @@
     font-size: 16px;
 }
 .content{
-    padding: 50px 0 50px 50px;
+    padding: 50px 0 ;
+    width:100%;
 }
 
 @media screen and (max-width:1000px){

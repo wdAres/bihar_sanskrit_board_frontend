@@ -259,6 +259,30 @@
     padding-left: 32px;
 }
 
+.menu_item {
+    position: relative;
+  }
+.dropdown {
+    cursor: pointer;
+}
+.submenu {
+    margin-left: 20px;
+    padding-left: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown_icon {
+    margin-left: 200px; 
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .submenu .sidebar_link {
+    margin: 5px 0;
+    border: none;
+  }
+  
 .db_links:hover .hidden_links{
 display: flex !important;
 }
@@ -268,6 +292,8 @@ display: flex !important;
     top: 100%;
     flex-direction: column;
     background: #063180;
+    left: 0;
+    min-width: 210px;
     /* background: #e7f4ff; */
 }
 
@@ -318,3 +344,12 @@ display: flex !important;
         padding: 30px 0;
     }
 }
+
+.sidebar {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden; 
+   
+    
+  }
+  
