@@ -13,6 +13,11 @@
     align-items: center;
     justify-content: space-between;
     margin-inline: auto;
+    padding: 15px 0 ;
+}
+
+.second_picture{
+    width: 100px;
 }
 
 .inner_header a{
@@ -23,34 +28,46 @@
     align-items: center;
 }
 
-.header_logo_inner_div{
-    
+.header_logo_inner_div {
+    display: flex
+;
+    flex-direction: column;
+    row-gap: 5px;
 }
 .header_logo_inner_div h4{
     margin-bottom: 2px;
     font-size: 15px;
     color: white;
 }
-.header_logo_inner_div h6{
-    color: white;
-    font-size: 13px;
+.header_logo_inner_div h6 {
+    color: #e6f877;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .header_logo img {
-    width: 60px;
+    width: 75px;
 }
 
-.header_nav {
+.lower_div{
+    background: #96bffd;
+}
+
+.header_nav{
     display: flex;
     gap: 0px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1230px;
+    margin-inline: auto;
 }
+
 
 .header_nav_link {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    /* color: #181717; */
+    color: #181717;
     height: 70px;
     display: flex;
     align-items: center;
@@ -58,7 +75,7 @@
     position: relative;
     padding-inline: 13px;
     text-transform: uppercase;
-    color: white !important;
+    /* color: white !important; */
 }
 
 .header_nav_link::after {
@@ -89,7 +106,7 @@
 
 .pos_ab{
     position: absolute;
-    top: 72px;
+    top: 202px;
     right: 0;
 }
 
@@ -291,7 +308,8 @@ display: flex !important;
     position: absolute;
     top: 100%;
     flex-direction: column;
-    background: #063180;
+    /* background: #063180; */
+    background: #96bffd ;
     left: 0;
     min-width: 210px;
     /* background: #e7f4ff; */
@@ -301,11 +319,24 @@ display: flex !important;
     border: none !important;
 }
 
+.marquee{
+    color: yellow;
+    background: #063180;
+    padding: 10px 0;
+}
+.marquee div{
+    display: flex
+    ;
+        flex-direction: row;
+        gap: 20px  ;
+        padding: 10px 0;
+}
+
 @media screen and (max-width:1000px) {
     /* Header */
 
     .header {
-        padding: 10px 0;
+        padding: 10px 15px;
     }
 
     .header_nav {
@@ -321,7 +352,7 @@ display: flex !important;
     }
 
     .pos_ab{
-        top: 63px;
+        top: 97px;
     }
 
     /* Footer */
@@ -334,6 +365,21 @@ display: flex !important;
         flex-direction: column;
         gap: 50px;
     }
+
+    .header_logo_inner_div h4{
+        font-size: 11px;
+    }
+    .header_logo_inner_div h6 {
+        font-size: 9px;
+    }
+    
+    .header_logo img {
+        width: 45px;
+    }
+    .second_picture{
+        display: none;
+    }
+    
 
 }
 

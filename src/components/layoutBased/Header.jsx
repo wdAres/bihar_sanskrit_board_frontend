@@ -11,11 +11,22 @@ const Header = ({ openSidebar }) => {
         <a className={classes.header_logo} href="#!">
           <img src="/images/bssp_logo.png" alt="" />
           <div className={classes.header_logo_inner_div}>
-            <h4>Bihar Sanskrit</h4>
-            <h6>Education Board Patna</h6>
+            <h4>Bihar Sanskrit Shaksha Board</h4>
+            <h6>AN AUTONOMUS BODY UNDER MINISTRY OF EDUCATION, </h6>
+            <h6>GOVERNMENT OF BIHAR</h6>
           </div>
         </a>
-        <nav className={classes.header_nav}>
+        
+        <img src="/images/Picture2.png" className={classes.second_picture} alt="" />
+        <button className={classes.ham_burger_menu}>
+          <RxHamburgerMenu color='white' onClick={openSidebar} size={20} />
+        </button>
+        <div className={classes.pos_ab}>
+          <GoogleTranslate />
+        </div>
+      </div>
+      <div className={classes.lower_div}>
+      <nav className={classes.header_nav}>
           <NavLink to={'/'} className={classes.header_nav_link}>Home</NavLink>
 
           {/* <NavLink to={'/about'} className={classes.header_nav_link}>About</NavLink> */}
@@ -58,13 +69,13 @@ const Header = ({ openSidebar }) => {
             </div>
           </div>
         </nav>
-        <button className={classes.ham_burger_menu}>
-          <RxHamburgerMenu color='white' onClick={openSidebar} size={20} />
-        </button>
-        <div className={classes.pos_ab}>
-          <GoogleTranslate />
-        </div>
       </div>
+      <marquee className={classes.marquee}>
+        <div>
+        <h3>Total Teachers <span>50</span></h3>
+        <h3>Total Students <span>50</span></h3>
+        </div>
+      </marquee>
     </header>
   )
 }

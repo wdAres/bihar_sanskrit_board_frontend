@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
                
             </div>
-            <div className={`${classes.box_2}`}>
+            {/* <div className={`${classes.box_2}`}>
             <h1 className={classes.h1}>About Us</h1>
                 <p className={classes.p}>
                 The Bihar Sanskrit Shiksha Board was established for the promotion and propagation of the Sanskrit language. It operates approved Sanskrit schools from Class 1 to Class 10. Examinations for Classes 1 to 9 are conducted at the school level. The examinations for secondary schools are conducted at the board level, which is called the Madhyama (Class 10) annual examination. The control and administrative office for the Madhyama examination and Sanskrit schools from Class 1 to 10 under the board is the Bihar Sanskrit Shiksha Board. The curriculum and syllabus for these schools are determined by the board with the permission of the state government.
@@ -96,18 +96,12 @@ const Home = () => {
            
             <div className={`${classes.box_5}`}>
                 <div className={classes.boxed_sub_heading}>Quick Inquiry</div>
-                {/* <div className={classes.box_5_form}>
-                    <input type="text" placeholder='Your Name' />
-                    <input type="text" placeholder='Email ID' />
-                    <textarea placeholder='Message'></textarea>
-                    <button>Submit</button>
-                </div> */}
                 <ContactForm />
-            </div>
+            </div> */}
             <div className={classes.box_6}>
-            <NoticeBoard data={noticeData} loading={noticeLoading} heading={'Notice'} />
-            <NoticeBoard data={linkData} loading={linkLoading} heading={'Important Links'} />
-            <NoticeBoard data={tenderData} loading={tenderLoading} heading={'Tender'} />
+            <NoticeBoard styleComb={{heading:classes.nb_heading_1,bg:classes.nb_bg_1}} data={noticeData} loading={noticeLoading} heading={'Notice'} />
+            <NoticeBoard styleComb={{heading:classes.nb_heading_2,bg:classes.nb_bg_2}} data={linkData} loading={linkLoading} heading={'Important Links'} />
+            <NoticeBoard styleComb={{heading:classes.nb_heading_3,bg:classes.nb_bg_3}} data={tenderData} loading={tenderLoading} heading={'Tender'} />
             </div>
         </section>
     )

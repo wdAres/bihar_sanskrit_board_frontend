@@ -5,20 +5,26 @@
     display: grid;
     grid-template-areas:
         "one one one one one one"
+        /* "two two two two two three"
+        "four four four four four five" */
+        "six six six six six six"
+    ;
+    /* grid-template-areas:
+        "one one one one one one"
         "two two two two two three"
         "four four four four four five"
         "six six six six six six"
-    ;
+    ; */
     gap: 50px;
 
     @media (width<1000px) {
         grid-template-areas:
             "one"
-            "two"
+            "six"
+            /* "two"
             "three"
             "four"
-            "five"
-            "six"
+            "five" */
         ;
     }
 }
@@ -215,4 +221,25 @@
     padding-top: 50px;
     padding-bottom: 50px;
     margin-inline: auto;
+}
+
+
+.nb_heading_1{
+    color:#000000 !important;
+}
+.nb_bg_1{
+    background-color:#ffedb6 !important;
+}
+
+.nb_heading_2{
+    color:#27afbc !important;
+}
+.nb_bg_2{
+    background-color:#dbeef1 !important;
+}
+.nb_heading_3{
+    color:#0c8900 !important;
+}
+.nb_bg_3{
+    background-color:#d9e9c8 !important;
 }

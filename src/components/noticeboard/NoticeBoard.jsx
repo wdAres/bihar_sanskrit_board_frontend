@@ -5,7 +5,7 @@ import './NoticeBoard.css';
 import { useNavigate } from 'react-router-dom';
 import { IoDocumentAttachOutline } from 'react-icons/io5';
 import NoticeCard from './NoticeCard';
-const NoticeBoard = ({heading,data,loading}) => {
+const NoticeBoard = ({heading,data,loading,styleComb}) => {
     const navigate = useNavigate();
     const handleViewMore = () => {
         if (heading === 'Notice') navigate('/notices');
@@ -47,8 +47,8 @@ const NoticeBoard = ({heading,data,loading}) => {
         //         )) : 'No Data Found!'}
         //     </div>  
         // </div>
-        <div className={classes.notice_board}>
-            <h2 className={classes.heading}>{heading}</h2>
+        <div className={`${classes.notice_board} ${styleComb?.bg}`}>
+            <h2  className={`${classes.heading} ${styleComb?.heading}`}>{heading}</h2>
             <div className={classes.grid}>
                 {loading ? (
                     'Loading'
