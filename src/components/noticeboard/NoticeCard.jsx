@@ -19,9 +19,9 @@ function NoticeCard({ label, createdAt, file , url , latest=false }) {
         <div className={classes.card}>
             {file ?
 
-                <IoDocumentAttachOutline fontSize={50} color='yellow' />
+                <IoDocumentAttachOutline fontSize={50} color='black' />
                 :
-                <FiLink fontSize={50} color='yellow' />
+                <FiLink fontSize={50} color='' />
             }
             {/* <label>{label}</label> */}
             <a target='_blank' href={`${BASE_API}/${file}`} className={classes.notice_p}>{moment(createdAt).format('DD-MM-YYYY')} - {label} {latest && <span className={classes.notice_span}>latest</span>}</a>
