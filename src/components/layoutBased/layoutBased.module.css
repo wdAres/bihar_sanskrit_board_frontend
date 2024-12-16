@@ -320,8 +320,8 @@ display: flex !important;
 }
 
 .marquee{
-    color: yellow;
-    background: #063180;
+    color: rgb(240, 240, 228);
+    background: #f8111d;
     padding: 10px 0;
 }
 .marquee div{
