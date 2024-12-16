@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './layoutBased.module.css'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { NavLink } from 'react-router-dom'
 import GoogleTranslate from '../GoogleTranslate'
+import useHttp2 from '../../hooks/useHttp2'
 
 const Header = ({ openSidebar }) => {
+
+  const [totalStudents,setTotalStudents] = useState(0)
+  const [totalSchools,setTotalSchools] = useState(0)
+  const {sendRequest:getNotice,isLoading:noticeLoading} = useHttp2()
+  const {sendRequest:getTender,isLoading:tenderLoading} = useHttp2()
+  useEffect(()=>{
+      getNotice({url:'total_schools'},res=>{
+          setTotalSchools(res.data.count)
+      })
+      getTender({url:'total_students'},res=>{
+          setTotalStudents(res.data.count)
+      })
+  },[])
+
+
   return (
     <header className={classes.header}>
+      <marquee className={classes.marquee}>
+        <div>
+        <h3>Total Schools <span>{totalSchools}</span></h3>
+        <h3>Total Students <span>{totalStudents}</span></h3>
+        </div>
+      </marquee>
       <div className={`${classes.inner_header} universal_width`}>
         <a className={classes.header_logo} href="#!">
           <img src="/images/bssp_logo.png" alt="" />
@@ -70,12 +92,7 @@ const Header = ({ openSidebar }) => {
           </div>
         </nav>
       </div>
-      <marquee className={classes.marquee}>
-        <div>
-        <h3>Total Teachers <span>50</span></h3>
-        <h3>Total Students <span>50</span></h3>
-        </div>
-      </marquee>
+      
     </header>
   )
 }

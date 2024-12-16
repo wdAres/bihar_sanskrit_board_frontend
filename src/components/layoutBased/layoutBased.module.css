@@ -106,7 +106,7 @@
 
 .pos_ab{
     position: absolute;
-    top: 202px;
+    top: -2px;
     right: 0;
 }
 
@@ -321,9 +321,11 @@ display: flex !important;
 
 .marquee{
     color: rgb(240, 240, 228);
-    background: #f8111d;
-    padding: 10px 0;
-}
+    background: #e0323c;
+    padding: 0;
+    font-size: 13px;
+    }
+
 .marquee div{
     display: flex
     ;
