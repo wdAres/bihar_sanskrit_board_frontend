@@ -20,6 +20,7 @@ import ScrollToTop from './components/Forms/ScrollToTop'
 import AllNotice from './static/AllNotice'
 import AllTender from './static/AllTender'
 import AllImportantLinks from './static/AllImportantLinks'
+import Cobse from './static/Cobse'
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
         <Route path='/about'>
           <Route exact path='/about/' element={<About />} />
           <Route exact path='/about/general_info' element={<About />} />
+          <Route exact path='/about/cobse' element={<Cobse />} />
           <Route path='/about/chairman_message' element={<ChairmanMessage />} />
           <Route path='/about/history' element={<History />} />
           <Route path='/about/objectives' element={<Objectives />} />

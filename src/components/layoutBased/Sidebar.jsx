@@ -69,6 +69,9 @@ const Sidebar = ({ closeSidebar, sidebar }) => {
               <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/chairman_message'}>
                 - Chairman's Message
               </Link>
+              <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/cobse'}>
+                - Cobse
+              </Link>
               <Link onClick={closeSidebar} className={classes.sidebar_link} to={'/about/objectives'}>
                 - Objectives
               </Link>

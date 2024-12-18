@@ -57,7 +57,7 @@ const Header = ({ openSidebar }) => {
             <div className={classes.hidden_links}>
               <NavLink to={'/about/general_info'} className={classes.header_nav_link}>ABOUT US</NavLink>
               <NavLink to={'/about/chairman_message'} className={classes.header_nav_link}>CHAIRMAN’S MESSAGE</NavLink>
-              <NavLink to={'/about/chairman_message'} className={classes.header_nav_link}>COBSE</NavLink>
+              <NavLink to={'/about/cobse'} className={classes.header_nav_link}>COBSE</NavLink>
               {/* <NavLink to={'/about/general_info'} className={classes.header_nav_link}>General Information</NavLink> */}
               
               <NavLink to={'/about/history'} className={classes.header_nav_link}>HISTORY</NavLink>
